@@ -1,7 +1,7 @@
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
-
+//在concurrent包中提供了condition接口，通过该接口可唤醒指定的某个线程，而不是采用随机唤醒的形式。
 public class LockTest {
 
 
