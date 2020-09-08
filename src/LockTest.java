@@ -20,9 +20,11 @@ public class LockTest {
 
         LockTest test = new LockTest();
         new Thread(() -> test.lockwait(condition_1), "thread-1").start();
+        Thread.sleep(3000);
         new Thread(() -> test.lockwait(condition_2), "thread-2").start();
         Thread.sleep(3000);
         new Thread(() -> test.locksignal(condition_2), "thread-3").start();
+        Thread.sleep(3000);
         new Thread(() -> test.locksignal(condition_1), "thread-4").start();
     }
 
